@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project" default="default">
+	<description>ランダム値の任意サイズのファイルを作成したり、ファイルを読み込んでCRC32を計算するテスト用アプリ.</description>
+
+	<target name="default" description="description">
+		<delete dir="work" />
+		<mkdir dir="work" />
+		<javac srcdir="src" encoding="UTF-8" target="1.7" debug="true" destdir="work" />
+		<jar basedir="work" destfile="BigFileTester.jar">
+			<manifest>
+				<attribute name="Main-Class" value="jp.seraphyware.bigtesttester.BigFileTester" />
+			</manifest>
+		</jar>
+		<delete dir="work" />
+	</target>
+</project>
